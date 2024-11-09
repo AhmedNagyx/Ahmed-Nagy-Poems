@@ -1,0 +1,293 @@
+/* *==> general style */
+:root {
+  --main-color: #ffcd03;
+  --second-color: #f1f1f1;
+  --light-color-text: #fff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Almarai',sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+i {
+  color: var(--main-color);
+}
+
+.d-flow-root {
+  display: flow-root;
+}
+.float-left {
+  float: left;
+}
+.padding-block-80 {
+  padding-block: 80px;
+}
+.container {
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+.section-title {
+  text-align: center;
+}
+.section-title h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  position: relative;
+  text-transform: capitalize;
+  color: #333;
+}
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-style: solid;
+  border-color: var(--main-color);
+  border-width: 1px 0;
+  width: 70px;
+  padding: 4px 0 5px;
+  margin: 0 auto;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 160px;
+  height: 1px;
+  bottom: 5px;
+  background-color: var(--main-color);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .section-title h2 {
+    font-size: 32px;
+  }
+}
+/* *==> End general style */
+
+/* ?==> Start header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.3s;
+}
+
+.header {
+  background-color: black;
+  box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);
+}
+
+.header .logo {
+  color: var(--main-color);
+  float: left;
+}
+
+.header .logo a {
+  display: block;
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: 800;
+  padding: 25px 0;
+}
+
+.header .navbar {
+  width: fit-content;
+  margin-left: auto;
+  margin-block: 7px;
+}
+
+.header .navbar.active {
+  display: block;
+}
+
+.header .navbar li {
+  display: inline-block;
+  padding-inline: 20px;
+}
+.header .navbar li .nav-link {
+  display: block;
+  color: var(--light-color-text);
+  text-transform: capitalize;
+  font-size: 23px;
+  font-weight: 300;
+  
+  padding-block: 20px;
+  transition: 0.4s;
+}
+.header .navbar li .nav-link:hover,
+.header .navbar li .nav-link.active {
+  color: var(--main-color);
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: none;
+  display: none;
+  margin: 18px 0 18px auto;
+  color: var(--light-color-text);
+  cursor: pointer;
+}
+
+.nav-btn i {
+  padding: 9px;
+  transition: 0.4s;
+  font-size: 16px;
+}
+.nav-btn:hover {
+  color: var(--main-color);
+}
+
+@media screen and (max-width: 900px) {
+  .nav-btn {
+    display: block;
+  }
+
+  .header .navbar {
+    display: none;
+    background-color: black;
+    border-top: 1px solid rgba(236, 185, 3, 0.8);
+    width: 100%;
+    margin: auto;
+  }
+
+  .header .navbar li {
+    display: block;
+    padding-inline: 10px;
+    text-align: center;
+  }
+}
+
+.home {
+  margin-top: 60px;
+}
+
+
+@keyframes cursor {
+  0%,
+  100% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #ffffff00;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider-area .slider-text h1 {
+    font-size: 40px;
+  }
+  .slider-area .slider-text p {
+    font-size: 20px;
+  }
+}
+
+
+.poem-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  direction: rtl; /* For Arabic text alignment */
+  padding: 20px;
+}
+
+.poem-image p{
+  font-size: 22px;
+}
+
+/* Poem image styling */
+.poem-image img {
+  max-width: 40%; /* Adjusted max-width for better scaling */
+  height: auto;
+ 
+  margin-bottom: 25px;
+  box-shadow: 0 1px 3px rgba(50, 50, 50, 1);
+}
+
+
+/* Poem text styling */
+.poem-text {
+  max-width: 700px;
+  width: 100%;
+  font-weight: 500;
+}
+
+/* Verse styling */
+.verse {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+/* Line alignment for Arabic */
+.right {
+  text-align: right;
+  width: 48%;
+}
+
+.left {
+  text-align: left;
+  width: 48%;
+}
+.center {
+  text-align: center;
+  width : 100%;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .poem-image img {
+      max-width: 100%; /* Slightly increase image width on mobile */
+     
+  }
+
+  .verse {
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.2em; /* Slightly smaller font for mobile */
+  }
+
+  .right, .left, .center {
+    width: 100%;
+    text-align: center;
+  }
+}
+.small-text{
+  color: #ae8d07fe;
+  margin-bottom: 30px;
+}
+
+/* ?==> Start footer */
+.footer {
+  background-color: #000000;
+  padding-block: 30px;
+  text-align: center;
+}
+
+
+.footer .copy-right {
+  color: var(--light-color-text);
+}
+.footer .copy-right a {
+  color: var(--main-color);
+}
+  
