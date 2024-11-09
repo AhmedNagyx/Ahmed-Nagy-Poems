@@ -208,6 +208,7 @@ i {
   direction: rtl; /* For Arabic text alignment */
   padding: 20px;
 }
+
 .poem-image p{
   font-size: 22px;
 }
@@ -247,6 +248,10 @@ i {
   text-align: left;
   width: 48%;
 }
+.center {
+  text-align: center;
+  width : 100%;
+}
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
@@ -261,9 +266,9 @@ i {
       font-size: 1.2em; /* Slightly smaller font for mobile */
   }
 
-  .right, .left {
-      width: 100%;
-      text-align: center; /* Center-align for better mobile readability */
+  .right, .left, .center {
+    width: 100%;
+    text-align: center;
   }
 }
 .small-text{
