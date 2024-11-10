@@ -220,6 +220,10 @@
     
     margin-top: 25px;
   }
+  .slider-area .slider-text .version {
+    font-size: 15px;
+ 
+  }
   .slider-area .slider-text a {
     font-size: 25px;
     margin: 3px 3px 0 3px;
@@ -249,7 +253,7 @@
     position: relative;
     animation: typeEffect 6s infinite linear;
   }
-  
+
   
   @keyframes cursor {
     0%,
